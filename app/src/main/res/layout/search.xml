@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:queryHint="Enter Words"
+        android:background="@drawable/searchbg"
+        android:iconifiedByDefault="false"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Favourite"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="15dp"
+            android:text="Phonetics"
+            android:background="#f498ad"
+            android:gravity="center_vertical"
+            />
+        <Button
+            android:id="@+id/idBtnPlay"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:textSize="8dp"
+            android:text="Play Sound"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/phonetic_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:text="Definitions"
+        android:background="#f498ad"
+        android:gravity="center_vertical"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/meaning_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
